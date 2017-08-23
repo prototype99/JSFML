@@ -28,9 +28,10 @@ abstract class SFMLNativeTransformable extends SFMLNativeObject implements Trans
     private native void nativeSetPosition(float x, float y);
 
     @Override
-    public final void setPosition(float x, float y) {
+    public void setPosition(float x, float y) {
         setPosition(new Vector2f(x, y));
     }
+
 
     @Override
     public void setPosition(Vector2f v) {

@@ -25,6 +25,17 @@ public class RectangleShape extends Shape {
         this();
         setSize(size);
     }
+    public RectangleShape(Vector2f position, Vector2f size) {
+        this();
+        setSize(size);
+        setPosition(position);
+    }
+    public RectangleShape(float x,float y,float width,float height) {
+        this();
+        setSize(x,y);
+        setPosition(new Vector2f(width,height));
+    }
+
 
     @Override
     @Deprecated
@@ -50,6 +61,11 @@ public class RectangleShape extends Shape {
      */
     public void setSize(Vector2f size) {
         nativeSetSize(size.x, size.y);
+        this.size = size;
+        pointsNeedUpdate = true;
+    }
+    public void setSize(float x,float y) {
+        nativeSetSize(x,y);
         this.size = size;
         pointsNeedUpdate = true;
     }

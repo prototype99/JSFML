@@ -274,6 +274,12 @@ public abstract class Shape extends SFMLNativeTransformable implements Drawable 
         super.setPosition(v);
         boundsNeedUpdate = true;
     }
+    @Override
+    public void setPosition(float x, float y) {
+        super.setPosition(x,y);
+        boundsNeedUpdate = true;
+    }
+
 
     @Override
     public void setRotation(float angle) {
