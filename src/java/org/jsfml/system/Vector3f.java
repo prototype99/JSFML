@@ -13,7 +13,7 @@ public final strictfp class Vector3f implements Serializable {
      * The zero vector.
      */
     public static final Vector3f ZERO = new Vector3f(0, 0, 0);
-
+///////////////////////////////////////////////////////////////////////////////////////
     /**
      * Adds two vectors.
      *
@@ -27,7 +27,19 @@ public final strictfp class Vector3f implements Serializable {
                 a.y + b.y,
                 a.z + b.z);
     }
-
+    /**
+     * Adds two vectors.
+     *
+     * @param vec the vector you would like to add to the current vector
+     * @return a new vector, representing the sum of the two vectors.
+     */
+    public Vector3f add(Vector3f vec) {
+        return new Vector3f(
+                this.x + vec.x,
+                this.y + vec.y,
+                this.z + vec.z);
+    }
+/////////////////////////////////////////////////////////////////////////////////////
     /**
      * Subtracts two vectors.
      *
@@ -41,7 +53,19 @@ public final strictfp class Vector3f implements Serializable {
                 a.y - b.y,
                 a.z - b.z);
     }
-
+    /**
+     * Subtracts two vectors.
+     *
+     * @param vec the vector you would like to subtract from the current vector
+     * @return a new vector, representing the difference between the two vectors.
+     */
+    public Vector3f sub(Vector3f vec) {
+        return new Vector3f(
+                this.x - vec.x,
+                this.y - vec.y,
+                this.z - vec.z);
+    }
+/////////////////////////////////////////////////////////////////////////////
     /**
      * Performs a component-wise multiplication of two vectors.
      *
@@ -55,7 +79,19 @@ public final strictfp class Vector3f implements Serializable {
                 a.y * b.y,
                 a.z * b.z);
     }
-
+    /**
+     * Performs a component-wise multiplication of two vectors.
+     *
+     * @param vec the first vector.
+     * @return a new vector, representing the "product" of the two vectors.
+     */
+    public Vector3f componentwiseMul(Vector3f vec) {
+        return new Vector3f(
+                this.x * vec.x,
+                this.y * vec.y,
+                this.z * vec.z);
+    }
+////////////////////////////////////////////////////////////////////////
     /**
      * Performs a component-wise division of two vectors.
      *
@@ -69,7 +105,19 @@ public final strictfp class Vector3f implements Serializable {
                 a.y / b.y,
                 a.z / b.z);
     }
-
+    /**
+     * Performs a component-wise division of two vectors.
+     *
+     * @param vec the vector you would like to divide the current vector by
+     * @return a new vector, representing the "quotient" of the two vectors.
+     */
+    public Vector3f componentwiseDiv(Vector3f vec) {
+        return new Vector3f(
+                this.x / vec.x,
+                this.y / vec.y,
+                this.z / vec.z);
+    }
+///////////////////////////////////////////////////////////////////////////////
     /**
      * Multiplies a vector by a scalar.
      *
@@ -83,7 +131,19 @@ public final strictfp class Vector3f implements Serializable {
                 a.y * s,
                 a.z * s);
     }
-
+    /**
+     * Multiplies a vector by a scalar.
+     *
+     * @param s the scalar to multiply by.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector3f mul(float s) {
+        return new Vector3f(
+                this.x * s,
+                this.y * s,
+                this.z * s);
+    }
+///////////////////////////////////////////////////////////////////////////////
     /**
      * Multiplies a vector by the inverse of a scalar.
      *
@@ -97,7 +157,19 @@ public final strictfp class Vector3f implements Serializable {
                 a.y / s,
                 a.z / s);
     }
-
+    /**
+     * Multiplies a vector by the inverse of a scalar.
+     *
+     * @param s the scalar to divide by.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector3f div(float s) {
+        return new Vector3f(
+                this.x / s,
+                this.y / s,
+                this.z / s);
+    }
+//////////////////////////////////////////////////////////////////////////////////
     /**
      * Computes the negation of a vector.
      *
@@ -107,7 +179,15 @@ public final strictfp class Vector3f implements Serializable {
     public static Vector3f neg(Vector3f v) {
         return new Vector3f(-v.x, -v.y, -v.z);
     }
-
+    /**
+     * Computes the negation of a vector.
+     *
+     * @return a new vector, representing the negation of the current vector.
+     */
+    public Vector3f neg() {
+        return new Vector3f(-this.x, -this.y, -this.z);
+    }
+////////////////////////////////////////////////////////////////////////////////////
     /**
      * The vector's X coordinate.
      */

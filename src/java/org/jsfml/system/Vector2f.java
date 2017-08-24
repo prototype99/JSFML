@@ -13,7 +13,7 @@ public final strictfp class Vector2f implements Serializable {
      * The zero vector.
      */
     public static final Vector2f ZERO = new Vector2f(0, 0);
-
+///////////////////////////////////////////////////////////////////////////
     /**
      * Adds two vectors.
      *
@@ -22,9 +22,24 @@ public final strictfp class Vector2f implements Serializable {
      * @return a new vector, representing the sum of the two vectors.
      */
     public static Vector2f add(Vector2f a, Vector2f b) {
-        return new Vector2f(a.x + b.x, a.y + b.y);
-    }
 
+        return new Vector2f(
+                a.x + b.x,
+                a.y + b.y);
+    }
+    /**
+     * Adds two vectors.
+     *
+     * @param vec the vector you would like to add to the current vector
+     * @return a new vector, representing the sum of the two vectors.
+     */
+    public Vector2f add(Vector2f vec) {
+
+        return new Vector2f(
+                this.x + vec.x,
+                this.y + vec.y);
+    }
+/////////////////////////////////////////////////////////////////////////
     /**
      * Subtracts two vectors.
      *
@@ -32,10 +47,25 @@ public final strictfp class Vector2f implements Serializable {
      * @param b the second vector.
      * @return a new vector, representing the difference between the two vectors.
      */
-    public static Vector2f sub(Vector2f a, Vector2f b) {
-        return new Vector2f(a.x - b.x, a.y - b.y);
+    public static Vector2f sub(Vector2f a, Vector2f b)
+    {
+        return new Vector2f(
+                a.x - b.x,
+                a.y - b.y);
     }
 
+    /**
+     * Subtracts two vectors.
+     *
+     * @param vec the vector you would like to subtract from the current vector
+     * @return a new vector, representing the difference between the two vectors.
+     */
+    public Vector2f sub(Vector2f vec) {
+        return new Vector2f(
+                this.x - vec.x,
+                this.y - vec.y);
+    }
+////////////////////////////////////////////////////////////////////////////////////
     /**
      * Performs a component-wise multiplication of two vectors.
      *
@@ -44,8 +74,24 @@ public final strictfp class Vector2f implements Serializable {
      * @return a new vector, representing the "product" of the two vectors.
      */
     public static Vector2f componentwiseMul(Vector2f a, Vector2f b) {
-        return new Vector2f(a.x * b.x, a.y * b.y);
+
+        return new Vector2f(
+                a.x * b.x,
+                a.y * b.y);
     }
+    /**
+     * Performs a component-wise multiplication of two vectors.
+     *
+     * @param vec the vector you would like to multiply to the current vector
+     * @return a new vector, representing the "product" of the two vectors.
+     */
+    public Vector2f componentwiseMul(Vector2f vec) {
+
+        return new Vector2f(
+                this.x * vec.x,
+                this.y * vec.y);
+    }
+////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * Performs a component-wise division of two vectors.
@@ -55,9 +101,23 @@ public final strictfp class Vector2f implements Serializable {
      * @return a new vector, representing the "quotient" of the two vectors.
      */
     public static Vector2f componentwiseDiv(Vector2f a, Vector2f b) {
-        return new Vector2f(a.x / b.x, a.y / b.y);
+        return new Vector2f(
+                a.x / b.x,
+                a.y / b.y);
     }
 
+    /**
+     * Performs a component-wise division of two vectors.
+     *
+     * @param vec the vector you would like to divide the current vector by.
+     * @return a new vector, representing the "quotient" of the two vectors.
+     */
+    public Vector2f componentwiseDiv(Vector2f vec) {
+        return new Vector2f(
+                this.x / vec.x,
+                this.y / vec.y);
+    }
+/////////////////////////////////////////////////////////////////////////////////
     /**
      * Multiplies a vector by a scalar.
      *
@@ -66,9 +126,24 @@ public final strictfp class Vector2f implements Serializable {
      * @return a new vector, representing the scaled vector.
      */
     public static Vector2f mul(Vector2f a, float s) {
-        return new Vector2f(a.x * s, a.y * s);
-    }
 
+        return new Vector2f(
+                a.x * s,
+                a.y * s);
+    }
+    /**
+     * Multiplies a vector by a scalar.
+     *
+     * @param s the scalar to multiply by.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector2f mul(float s) {
+
+        return new Vector2f(
+                this.x * s,
+                this.y * s);
+    }
+/////////////////////////////////////////////////////////////////////////////////
     /**
      * Multiplies a vector by the inverse of a scalar.
      *
@@ -77,9 +152,23 @@ public final strictfp class Vector2f implements Serializable {
      * @return a new vector, representing the scaled vector.
      */
     public static Vector2f div(Vector2f a, float s) {
-        return new Vector2f(a.x / s, a.y / s);
+        return new Vector2f(
+                a.x / s,
+                a.y / s);
     }
+    /**
+     * Multiplies a vector by the inverse of a scalar.
+     *
 
+     * @param s the scalar to divide by.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector2f div(float s) {
+        return new Vector2f(
+                this.x / s,
+                this.y / s);
+    }
+////////////////////////////////////////////////////////////////////////////////
     /**
      * Computes the negation of a vector.
      *
@@ -87,9 +176,23 @@ public final strictfp class Vector2f implements Serializable {
      * @return a new vector, representing the negation of the given vector.
      */
     public static Vector2f neg(Vector2f v) {
-        return new Vector2f(-v.x, -v.y);
-    }
 
+        return new Vector2f(
+                -v.x,
+                -v.y);
+    }
+    /**
+     * Computes the negation of a vector.
+     *
+     * @return a new vector, representing the negation of the given vector.
+     */
+    public Vector2f neg() {
+
+        return new Vector2f(
+                -this.x,
+                -this.y);
+    }
+///////////////////////////////////////////////////////////////////////////////////////
     /**
      * The vector's X coordinate.
      */
