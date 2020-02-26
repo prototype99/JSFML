@@ -215,6 +215,13 @@
 		<property name="arch" value="linux_x86" />
 		<ant target="linux.build" />
 	</target>
+
+	<!-- Compile C++ for Linux 32 -->
+	<target name="linuxPi" description="Build the C++ sources for Linux 32 bit RPi.">
+		<property name="arch" value="linux_armhf" />
+		<ant target="linux.build" />
+	</target>
+
 	
 	<!-- Compile C++ for Linux 64 -->
 	<target name="linux64" description="Build the C++ sources for Linux 64 bit.">
