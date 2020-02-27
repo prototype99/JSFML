@@ -217,8 +217,8 @@
 	</target>
 
 	<!-- Compile C++ for Linux 32 -->
-	<target name="linuxPi" description="Build the C++ sources for Linux 32 bit RPi.">
-		<property name="arch" value="linux_armhf" />
+	<target name="linuxArm" description="Build the C++ sources for Linux 32 bit RPi.">
+		<property name="arch" value="linux_arm" />
 		<ant target="linux.build" />
 	</target>
 
@@ -415,6 +415,7 @@ win32   -- Compiles and links the C++ sources for Windows 32 bit.
 win64   -- Compiles and links the C++ sources for Windows 64 bit.
 linux32 -- Compiles and links the C++ sources for Linux 32 bit.
 linux64 -- Compiles and links the C++ sources for Linux 64 bit.
+linuxArm-- Compiles and links the C++ sources for Linux arm.
 macosx  -- Compiles and links the C++ sources for Mac OS X.
 jar     -- Generates the JSFML jar file in out.
 signjar -- Signs the generated JAR file.

@@ -55,6 +55,14 @@ public class Shader extends SFMLNativeObject implements ConstShader {
      */
     public static native boolean isAvailable();
 
+
+    /**
+     * checks if geometry is avalailbe on system
+     * @return {@code true} if geometry is avaialble, {@code false} otherwise.
+     *
+     */
+    public static native boolean isGeometryAvailable();
+
     /**
      * Enumeration of shader types.
      */

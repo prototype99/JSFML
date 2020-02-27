@@ -56,6 +56,7 @@ public final class SFMLNative {
     }
 
     private static String readMD5File(Path path) throws IOException {
+	System.out.println(""+path);
         try (final InputStream fis = Files.newInputStream(path)) {
             return readMD5File(fis);
         }
@@ -119,6 +120,9 @@ public final class SFMLNative {
                     case "amd64":
                         arch = "linux_x64";
                         break;
+	            case "arm":
+			arch = "linux_arm";
+			break;
                 }
 
                 nativeLibs.add("libsfml-system.so");
@@ -146,7 +150,6 @@ public final class SFMLNative {
             //Extract native libraries
             final String nativeResourcePath = JSFML_BIN_RESOURCE_PATH + arch + "/";
             final Path nativeLibPath = JSFML_USER_HOME.resolve(arch);
-
             try {
                 Files.createDirectories(nativeLibPath);
             } catch (FileAlreadyExistsException ex) {
@@ -158,7 +161,6 @@ public final class SFMLNative {
 
             for (String lib : nativeLibs) {
                 final Path libFile = nativeLibPath.resolve(lib);
-
                 //Check MD5 hash, don't extract if not necessary
                 boolean md5Equal = false;
 
@@ -166,10 +168,8 @@ public final class SFMLNative {
 
                 try (final InputStream md5InputStream =
                              SFMLNative.class.getResourceAsStream(nativeResourcePath + md5FileName)) {
-
                     final String md5Jar = readMD5File(md5InputStream);
                     final Path md5File = nativeLibPath.resolve(md5FileName);
-
                     if (Files.isRegularFile(libFile) && Files.isRegularFile(md5File)) {
                         md5Equal = readMD5File(md5File).equals(md5Jar);
                     }

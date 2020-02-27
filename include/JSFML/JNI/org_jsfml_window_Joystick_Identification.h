@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 #undef org_jsfml_window_Joystick_Identification_serialVersionUID
-#define org_jsfml_window_Joystick_Identification_serialVersionUID 4831994862885876452i64
+#define org_jsfml_window_Joystick_Identification_serialVersionUID 4831994862885876452LL
 #ifdef __cplusplus
 }
 #endif

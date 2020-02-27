@@ -169,7 +169,7 @@ public class ExampleScene implements Scene {
         textBackground.setPosition(0, target.getSize().y);
 
         //Load and setup wave shader
-        if (Shader.isAvailable()) {
+	if ( Shader.isAvailable() && Shader.isGeometryAvailable() ) {
             waveXShader = new Shader();
             waveXShader.loadFromStream(
                     getClass().getResourceAsStream("/resources/wave-x.frag"), Shader.Type.FRAGMENT);

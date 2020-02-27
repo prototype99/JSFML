@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 #undef org_jsfml_window_VideoMode_serialVersionUID
-#define org_jsfml_window_VideoMode_serialVersionUID 8608938390916786270i64
+#define org_jsfml_window_VideoMode_serialVersionUID 8608938390916786270LL
 /*
  * Class:     org_jsfml_window_VideoMode
  * Method:    nativeGetDesktopMode

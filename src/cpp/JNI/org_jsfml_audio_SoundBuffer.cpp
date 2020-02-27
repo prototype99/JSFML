@@ -56,7 +56,8 @@ JNIEXPORT jboolean JNICALL Java_org_jsfml_audio_SoundBuffer_nativeLoadFromSample
     (JNIEnv *env, jobject obj, jobject buffer, jint sampleCount, jint channelCount, jint sampleRate) {
 
     sf::Int16 *samples = (sf::Int16*)env->GetDirectBufferAddress(buffer);
-    return THIS(sf::SoundBuffer)->loadFromSamples(samples, sampleCount, channelCount, sampleRate);
+    sf::Uint64 sc=sampleCount+0;
+    return THIS(sf::SoundBuffer)->loadFromSamples(samples, sc, channelCount, sampleRate);
 }
 
 /*
