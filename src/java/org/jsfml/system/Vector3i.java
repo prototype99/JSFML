@@ -13,7 +13,7 @@ public final class Vector3i implements Serializable {
      * The zero vector.
      */
     public static final Vector3i ZERO = new Vector3i(0, 0, 0);
-
+////////////////////////////////////////////////////////////////////////
     /**
      * Adds two vectors.
      *
@@ -27,7 +27,19 @@ public final class Vector3i implements Serializable {
                 a.y + b.y,
                 a.z + b.z);
     }
-
+    /**
+     * Performs a addition on the current vector
+     *
+     * @param vec the vector you would like to add this current vector with
+     * @return a new vector
+     */
+    public Vector3i add(Vector3i vec) {
+        return new Vector3i(
+                this.x + vec.x,
+                this.y + vec.y,
+                this.z + vec.z);
+    }
+/////////////////////////////////////////////////////////////////////////////////
     /**
      * Subtracts two vectors.
      *
@@ -41,7 +53,19 @@ public final class Vector3i implements Serializable {
                 a.y - b.y,
                 a.z - b.z);
     }
-
+    /**
+     * Performs a subtraction on the current vector
+     *
+     * @param vec the vector you would like to subtract from current vector with
+     * @return a new vector
+     */
+    public Vector3i sub(Vector3i vec) {
+        return new Vector3i(
+                this.x - vec.x,
+                this.y - vec.y,
+                this.z - vec.z);
+    }
+////////////////////////////////////////////////////////////////////////////////////
     /**
      * Performs a component-wise multiplication of two vectors.
      *
@@ -55,7 +79,19 @@ public final class Vector3i implements Serializable {
                 a.y * b.y,
                 a.z * b.z);
     }
-
+    /**
+     * Performs a component-wise multiplication on the current vector
+     *
+     * @param vec the vector you would like to multiply the current vector with
+     * @return a new vector
+     */
+    public Vector3i componentwiseMul(Vector3i vec) {
+        return new Vector3i(
+                this.x * vec.x,
+                this.y * vec.y,
+                this.z * vec.z);
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////
     /**
      * Performs a component-wise division of two vectors.
      *
@@ -69,7 +105,19 @@ public final class Vector3i implements Serializable {
                 a.y / b.y,
                 a.z / b.z);
     }
-
+    /**
+     * Performs a component-wise division of two vectors.
+     *
+     * @param vec the vector you would like to divide the current vector by.
+     * @return a new vector representing the quotient.
+     */
+    public Vector3i componentwiseDiv(Vector3i vec) {
+        return new Vector3i(
+                this.x / vec.x,
+                this.y / vec.y,
+                this.z / vec.z);
+    }
+////////////////////////////////////////////////////////////////////////////////////////
     /**
      * Multiplies a vector by a scalar.
      *
@@ -83,7 +131,19 @@ public final class Vector3i implements Serializable {
                 a.y * s,
                 a.z * s);
     }
-
+    /**
+     * Multiplies a vector by a scalar.
+     *
+     * @param s the scalar to multiply by.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector3i mul(int s) {
+        return new Vector3i(
+                this.x * s,
+                this.y * s,
+                this.z * s);
+    }
+/////////////////////////////////////////////////////////////////////////////
     /**
      * Performs an integer division on each component of the vector by a scalar.
      *
@@ -97,7 +157,19 @@ public final class Vector3i implements Serializable {
                 a.y / s,
                 a.z / s);
     }
-
+    /**
+     * Performs an integer division on each component of the vector by a scalar.
+     *
+     * @param s the scalar.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector3i div(int s) {
+        return new Vector3i(
+                this.x / s,
+                this.y / s,
+                this.z / s);
+    }
+//////////////////////////////////////////////////////////////////////////////////
     /**
      * Computes the negation of a vector.
      *
@@ -105,9 +177,25 @@ public final class Vector3i implements Serializable {
      * @return a new vector, representing the negation of the given vector.
      */
     public static Vector3i neg(Vector3i v) {
-        return new Vector3i(-v.x, -v.y, -v.z);
-    }
 
+        return new Vector3i(
+                -v.x,
+                -v.y,
+                -v.z);
+    }
+    /**
+     * Computes the negation of a vector.
+     *
+     * @return a new vector, representing the negation of the current vector.
+     */
+    public Vector3i neg() {
+
+        return new Vector3i(
+                -this.x,
+                -this.y,
+                -this.z);
+    }
+///////////////////////////////////////////////////////////////////////////////////////////
     /**
      * The vector's X coordinate.
      */

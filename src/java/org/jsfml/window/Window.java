@@ -20,6 +20,62 @@ import java.util.Objects;
  * to the constants provided by it.
  */
 public class Window extends SFMLNativeObject implements WindowStyle {
+    private Image icon = null;
+    public Window() {
+        super();
+        SFMLNative.ensureDisplay();
+    }
+
+    /**
+     * Constructs a new window within the specified parent window.
+     *
+     * @param ptr the window handle of the parent window.
+     * @deprecated Use of this method may cause undefined behaviour and is not supported.
+     */
+    @Deprecated
+    @SuppressWarnings("deprecation")
+    protected Window(long ptr) {
+        super(ptr);
+    }
+
+    /**
+     * Constructs a new window and creates it with the specified settings.
+     *
+     * @param mode     the window's video mode.
+     * @param title    the window title.
+     * @param style    the window style.
+     * @param settings the settings for the OpenGL context.
+     * @see #create(VideoMode, String, int, ContextSettings)
+     */
+    public Window(VideoMode mode, String title, int style, ContextSettings settings) {
+        this();
+        create(mode, title, style, settings);
+    }
+
+    /**
+     * Constructs a new window and creates it with the specified settings and default
+     * context settings..
+     *
+     * @param mode  the window's video mode.
+     * @param title the window title.
+     * @param style the window style.
+     */
+    public Window(VideoMode mode, String title, int style) {
+        this();
+        create(mode, title, style, new ContextSettings());
+    }
+
+    /**
+     * Constructs a new window and creates it with the specified settings and default
+     * context settings and window style.
+     *
+     * @param mode  the window's video mode.
+     * @param title the window title.
+     */
+    public Window(VideoMode mode, String title) {
+        this();
+        create(mode, title, WindowStyle.DEFAULT, new ContextSettings());
+    }
     private static Event decodeEvent(IntBuffer ints) {
         final Event e;
         final int typeId = ints.get(0);
@@ -99,68 +155,14 @@ public class Window extends SFMLNativeObject implements WindowStyle {
      * A reference to it must be maintained in order to assure that the image will not be
      * garbage-collected.
      */
-    private Image icon = null;
+
 
     /**
      * Constructs a new window without actually creating it (making it visible).
      *
      * @see Window#create(org.jsfml.window.VideoMode, String, int, org.jsfml.window.ContextSettings)
      */
-    public Window() {
-        super();
-        SFMLNative.ensureDisplay();
-    }
 
-    /**
-     * Constructs a new window within the specified parent window.
-     *
-     * @param ptr the window handle of the parent window.
-     * @deprecated Use of this method may cause undefined behaviour and is not supported.
-     */
-    @Deprecated
-    @SuppressWarnings("deprecation")
-    protected Window(long ptr) {
-        super(ptr);
-    }
-
-    /**
-     * Constructs a new window and creates it with the specified settings.
-     *
-     * @param mode     the window's video mode.
-     * @param title    the window title.
-     * @param style    the window style.
-     * @param settings the settings for the OpenGL context.
-     * @see #create(VideoMode, String, int, ContextSettings)
-     */
-    public Window(VideoMode mode, String title, int style, ContextSettings settings) {
-        this();
-        create(mode, title, style, settings);
-    }
-
-    /**
-     * Constructs a new window and creates it with the specified settings and default
-     * context settings..
-     *
-     * @param mode  the window's video mode.
-     * @param title the window title.
-     * @param style the window style.
-     */
-    public Window(VideoMode mode, String title, int style) {
-        this();
-        create(mode, title, style, new ContextSettings());
-    }
-
-    /**
-     * Constructs a new window and creates it with the specified settings and default
-     * context settings and window style.
-     *
-     * @param mode  the window's video mode.
-     * @param title the window title.
-     */
-    public Window(VideoMode mode, String title) {
-        this();
-        create(mode, title, WindowStyle.DEFAULT, new ContextSettings());
-    }
 
     @Override
     @Deprecated

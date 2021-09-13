@@ -14,7 +14,7 @@ public final class Vector2i implements Serializable {
      * The zero vector.
      */
     public static final Vector2i ZERO = new Vector2i(0, 0);
-
+/////////////////////////////////////////////////////////////////////////////////////
     /**
      * Adds two vectors.
      *
@@ -23,9 +23,22 @@ public final class Vector2i implements Serializable {
      * @return a new vector, representing the sum of the two vectors.
      */
     public static Vector2i add(Vector2i a, Vector2i b) {
-        return new Vector2i(a.x + b.x, a.y + b.y);
+        return new Vector2i(
+                a.x + b.x,
+                a.y + b.y);
     }
-
+    /**
+     * Adds two vectors.
+     *
+     * @param vec the vector you would like to add to the current vector.
+     * @return a new vector, representing the sum of the two vectors.
+     */
+    public  Vector2i add(Vector2i vec) {
+        return new Vector2i(
+                this.x + vec.x,
+                this.y + vec.y);
+    }
+///////////////////////////////////////////////////////////////////////////////////////
     /**
      * Subtracts two vectors.
      *
@@ -34,10 +47,24 @@ public final class Vector2i implements Serializable {
      * @return a new vector, representing the difference between the two vectors.
      */
     public static Vector2i sub(Vector2i a, Vector2i b) {
-        return new Vector2i(a.x - b.x, a.y - b.y);
+
+        return new Vector2i(
+                a.x - b.x,
+                a.y - b.y);
     }
+    /**
+     * Subtracts two vectors.
+     *
+     * @param vec The vector you would like to subtract the current vector by
+     * @return a new vector, representing the difference between the two vectors.
+     */
+    public Vector2i sub(Vector2i vec) {
 
-
+        return new Vector2i(
+                this.x - vec.x,
+                this.y - vec.y);
+    }
+/////////////////////////////////////////////////////////////////////////////////////////
     /**
      * Performs a component-wise multiplication of two vectors.
      *
@@ -46,9 +73,22 @@ public final class Vector2i implements Serializable {
      * @return a new vector, representing the "product" of the two vectors.
      */
     public static Vector2i componentwiseMul(Vector2i a, Vector2i b) {
-        return new Vector2i(a.x * b.x, a.y * b.y);
+        return new Vector2i(
+                a.x * b.x,
+                a.y * b.y);
     }
-
+    /**
+     * Performs a component-wise multiplication of two vectors.
+     *
+     * @param vec the vector you would like to multiply the current vector by
+     * @return a new vector, representing the "product" of the two vectors.
+     */
+    public Vector2i componentwiseMul(Vector2i vec) {
+        return new Vector2i(
+                this.x * vec.x,
+                this.y * vec.y);
+    }
+////////////////////////////////////////////////////////////////////////////////////////////
     /**
      * Performs a component-wise division of two vectors.
      *
@@ -57,9 +97,22 @@ public final class Vector2i implements Serializable {
      * @return a new vector, representing the "quotient" of the two vectors.
      */
     public static Vector2i componentwiseDiv(Vector2i a, Vector2i b) {
-        return new Vector2i(a.x / b.x, a.y / b.y);
+        return new Vector2i(
+                a.x / b.x,
+                a.y / b.y);
     }
-
+    /**
+     * Performs a component-wise division of two vectors.
+     *
+     * @param vec the vector you would like to divide the current vector by
+     * @return a new vector, representing the "quotient" of the two vectors.
+     */
+    public Vector2i componentwiseDiv(Vector2i vec) {
+        return new Vector2i(
+                this.x / vec.x,
+                this.y / vec.y);
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////
     /**
      * Multiplies a vector by a scalar.
      *
@@ -68,9 +121,24 @@ public final class Vector2i implements Serializable {
      * @return a new vector, representing the scaled vector.
      */
     public static Vector2i mul(Vector2i a, int s) {
-        return new Vector2i(a.x * s, a.y * s);
-    }
 
+        return new Vector2i(
+                a.x * s,
+                a.y * s);
+    }
+    /**
+     * Multiplies a vector by a scalar.
+     *
+     * @param s the scalar.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector2i mul(int s) {
+
+        return new Vector2i(
+                this.x * s,
+                this.y * s);
+    }
+////////////////////////////////////////////////////////////////////////////////
     /**
      * Multiplies a vector by the inverse of a scalar.
      *
@@ -79,9 +147,22 @@ public final class Vector2i implements Serializable {
      * @return a new vector, representing the scaled vector.
      */
     public static Vector2i div(Vector2i a, int s) {
-        return new Vector2i(a.x / s, a.y / s);
+        return new Vector2i(
+                a.x / s,
+                a.y / s);
     }
-
+    /**
+     * Multiplies a vector by the inverse of a scalar.
+     *
+     * @param s the scalar to multiply by.
+     * @return a new vector, representing the scaled vector.
+     */
+    public Vector2i div( int s) {
+        return new Vector2i(
+                this.x / s,
+                this.y / s);
+    }
+///////////////////////////////////////////////////////////////////////////////////
     /**
      * Computes the negation of a vector.
      *
@@ -89,9 +170,21 @@ public final class Vector2i implements Serializable {
      * @return a new vector, representing the negation of the given vector.
      */
     public static Vector2i neg(Vector2i v) {
-        return new Vector2i(-v.x, -v.y);
+        return new Vector2i(
+                -v.x,
+                -v.y);
     }
-
+    /**
+     * Computes the negation of a vector.
+     *
+     * @return a new vector, representing the negation of the given vector.
+     */
+    public Vector2i neg() {
+        return new Vector2i(
+                -this.x,
+                -this.y);
+    }
+//////////////////////////////////////////////////////////////////////////////////
     /**
      * Constructs a new Vector2i instance from an AWT point.
      *
