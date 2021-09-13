@@ -25,6 +25,14 @@ JNIEXPORT jboolean JNICALL Java_org_jsfml_graphics_Shader_isAvailable
 
 /*
  * Class:     org_jsfml_graphics_Shader
+ * Method:    isGeometryAvailable
+ * Signature: ()Z
+ */
+JNIEXPORT jboolean JNICALL Java_org_jsfml_graphics_Shader_isGeometryAvailable
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     org_jsfml_graphics_Shader
  * Method:    nativeCreate
  * Signature: ()J
  */

@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 #undef org_jsfml_JSFML_JSFML_RELEASE_NUMBER
-#define org_jsfml_JSFML_JSFML_RELEASE_NUMBER 6L
+#define org_jsfml_JSFML_JSFML_RELEASE_NUMBER 7L
 /*
  * Class:     org_jsfml_JSFML
  * Method:    nativeGetSFMLVersion

@@ -68,3 +68,5 @@ Some things done in C++ are not possible in Java. This includes const references
 
 ## Additional Credits
 * [Laurent Gomila](https://github.com/LaurentGomila) - Author of SFML (http://www.sfml-dev.org/)
+
+
