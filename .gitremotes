@@ -1,0 +1,87 @@
+[remote "upstream"]
+	url = git@github.com:pdinklag/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[remote "mantognini"]
+	url = git@github.com:mantognini/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/mantognini/*
+[remote "intjelic"]
+	url = git@github.com:intjelic/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/intjelic/*
+[remote "sadolit"]
+	url = git@github.com:sadolit/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/sadolit/*
+[remote "VikkyMaru"]
+	url = git@github.com:VikkyMaru/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/VikkyMaru/*
+[remote "JohnCarmack"]
+	url = git@github.com:JohnCarmack/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/JohnCarmack/*
+[remote "GyrosOfWar"]
+	url = git@github.com:GyrosOfWar/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/GyrosOfWar/*
+[remote "dyher"]
+	url = git@github.com:dyher/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/dyher/*
+[remote "mcanovas"]
+	url = git@github.com:mcanovas/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/mcanovas/*
+[remote "Tetramputechture"]
+	url = git@github.com:Tetramputechture/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/Tetramputechture/*
+[remote "t-kgd"]
+	url = git@github.com:t-kgd/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/t-kgd/*
+[remote "siwiwit"]
+	url = git@github.com:siwiwit/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/siwiwit/*
+[remote "thewrath"]
+	url = git@github.com:thewrath/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/thewrath/*
+[remote "SeniorGima"]
+	url = git@github.com:SeniorGima/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/SeniorGima/*
+[remote "alexandre-janniaux"]
+	url = git@github.com:alexandre-janniaux/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/alexandre-janniaux/*
+[remote "thoced"]
+	url = git@github.com:thoced/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/thoced/*
+[remote "EthanBar"]
+	url = git@github.com:EthanBar/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/EthanBar/*
+[remote "DeaSTL"]
+	url = git@github.com:DeaSTL/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/DeaSTL/*
+[remote "eurico-nt"]
+	url = git@github.com:eurico-nt/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/eurico-nt/*
+[remote "miq"]
+	url = git@github.com:miq/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/miq/*
+[remote "Prichman"]
+	url = git@github.com:Prichman/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/Prichman/*
+[remote "comqdhb"]
+	url = git@github.com:comqdhb/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/comqdhb/*
+[remote "Master-COLLiDER"]
+	url = git@github.com:Master-COLLiDER/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/Master-COLLiDER/*
+[remote "WolfgangGitHub"]
+	url = git@github.com:WolfgangGitHub/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/WolfgangGitHub/*
+[remote "OldiLo"]
+	url = git@github.com:OldiLo/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/OldiLo/*
+[remote "Jholder7"]
+	url = git@github.com:Jholder7/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/Jholder7/*
+[remote "scotek"]
+	url = git@github.com:scotek/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/scotek/*
+[remote "Teln0"]
+	url = git@github.com:Teln0/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/Teln0/*
+[remote "pizzadox9999"]
+	url = git@github.com:pizzadox9999/JSFML.git
+	fetch = +refs/heads/*:refs/remotes/pizzadox9999/*
